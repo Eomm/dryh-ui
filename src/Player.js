@@ -38,6 +38,9 @@ class Player extends React.PureComponent {
 
   handleChange(event, key) {
     this.setState({ [key]: event.target.value });
+    if (this.props.onChange) {
+      this.props.onChange(this)
+    }
   }
 
   render() {

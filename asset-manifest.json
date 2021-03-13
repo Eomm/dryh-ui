@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/dryh-ui/static/css/main.8c34f28f.chunk.css",
-    "main.js": "/dryh-ui/static/js/main.060ca52a.chunk.js",
-    "main.js.map": "/dryh-ui/static/js/main.060ca52a.chunk.js.map",
+    "main.js": "/dryh-ui/static/js/main.92a6930d.chunk.js",
+    "main.js.map": "/dryh-ui/static/js/main.92a6930d.chunk.js.map",
     "runtime-main.js": "/dryh-ui/static/js/runtime-main.3f42a01b.js",
     "runtime-main.js.map": "/dryh-ui/static/js/runtime-main.3f42a01b.js.map",
-    "static/js/2.c7f5f24d.chunk.js": "/dryh-ui/static/js/2.c7f5f24d.chunk.js",
-    "static/js/2.c7f5f24d.chunk.js.map": "/dryh-ui/static/js/2.c7f5f24d.chunk.js.map",
+    "static/js/2.3db4ce40.chunk.js": "/dryh-ui/static/js/2.3db4ce40.chunk.js",
+    "static/js/2.3db4ce40.chunk.js.map": "/dryh-ui/static/js/2.3db4ce40.chunk.js.map",
     "index.html": "/dryh-ui/index.html",
     "static/css/main.8c34f28f.chunk.css.map": "/dryh-ui/static/css/main.8c34f28f.chunk.css.map",
-    "static/js/2.c7f5f24d.chunk.js.LICENSE.txt": "/dryh-ui/static/js/2.c7f5f24d.chunk.js.LICENSE.txt"
+    "static/js/2.3db4ce40.chunk.js.LICENSE.txt": "/dryh-ui/static/js/2.3db4ce40.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3f42a01b.js",
-    "static/js/2.c7f5f24d.chunk.js",
+    "static/js/2.3db4ce40.chunk.js",
     "static/css/main.8c34f28f.chunk.css",
-    "static/js/main.060ca52a.chunk.js"
+    "static/js/main.92a6930d.chunk.js"
   ]
 }

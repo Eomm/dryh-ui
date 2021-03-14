@@ -8,20 +8,25 @@ class Dice extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      value: this.props.value || 0,
+      minValue: Number.isInteger(this.props.min) ? this.props.min : 0,
       maxValue: Number.isInteger(this.props.max) ? this.props.max : 3
     };
   }
 
   add(inc) {
-    this.setDice({ target: { value: this.state.value + inc } })
+    this.setDice({ target: { value: this.props.value + inc } })
   }
 
   setDice(event) {
-    if (event.target.value < 0 || event.target.value > this.state.maxValue) {
+    if (event.target.value < this.state.minValue
+      || event.target.value > this.state.maxValue) {
       return
     }
-    this.setState({ value: event.target.value })
+
+    if (this.props.onChange) {
+      console.log(event);
+      this.props.onChange(event)
+    }
   }
 
   render() {
@@ -31,15 +36,17 @@ class Dice extends React.PureComponent {
         <InputGroup className="mb-3">
           <InputGroup.Prepend>
             <Button size="sm" onClick={() => { this.add(-1) }}
-              variant="outline-secondary">➖</Button>
+              disabled={this.props.value === this.state.minValue}
+              variant="secondary">➖</Button>
           </InputGroup.Prepend>
           <Form.Control type="number"
-            value={this.state.value}
+            value={this.props.value}
             onChange={(v) => { this.setDice(v) }}
             size="sm" />
           <InputGroup.Append>
             <Button size="sm" onClick={() => { this.add(1) }}
-              ariant="outline-primary">➕</Button>
+              disabled={this.props.value === this.state.maxValue}
+              variant="primary">➕</Button>
           </InputGroup.Append>
         </InputGroup>
       </>

@@ -9,6 +9,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Collapse from 'react-bootstrap/Collapse'
+import Card from 'react-bootstrap/Card'
+// import Button from 'react-bootstrap/Button'
 
 import './Player.css'
 
@@ -45,68 +47,82 @@ class Player extends React.PureComponent {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col>
-            <InputGroup size="sm">
-              <InputGroup.Prepend>
-                <InputGroup.Text>🏷</InputGroup.Text>
-              </InputGroup.Prepend>
-              <Form.Control type="text"
-                value={this.state.name}
-                onChange={(e) => { this.handleChange(e, 'name') }}
-                placeholder="My Name is..." />
-            </InputGroup>
-            <br></br>
-          </Col>
-          <Col>
-            <InputGroup size="sm">
-              <InputGroup.Prepend>
-                <InputGroup.Text>🛠</InputGroup.Text>
-              </InputGroup.Prepend>
-              <Form.Control type="text"
-                value={this.state.job}
-                onChange={(e) => { this.handleChange(e, 'job') }}
-                placeholder="and I am..." />
-            </InputGroup>
-            <br></br>
-          </Col>
-        </Row>
+      <Card className="mainBox">
+        <Card.Header as="h5">
+          <Container fluid>
+            <Row>
+              <Col>
+                <InputGroup size="sm">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>🏷</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <Form.Control type="text"
+                    value={this.state.name}
+                    onChange={(e) => { this.handleChange(e, 'name') }}
+                    placeholder="My Name is..." />
+                </InputGroup>
+              </Col>
+              <Col>
+                <InputGroup size="sm">
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>🛠</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <Form.Control type="text"
+                    value={this.state.job}
+                    onChange={(e) => { this.handleChange(e, 'job') }}
+                    placeholder="and I am..." />
+                </InputGroup>
+              </Col>
+            </Row>
+          </Container>
+        </Card.Header>
+        <Card.Body className="p-0 pt-4">
+          <Container fluid>
+            <Row>
+              <Col>
+                <Dice name="Discipline" value={this.state.discipline} />
+              </Col>
+              <Col>
+                <Dice name="Permanent Madness" value={this.state.madness} />
+              </Col>
+              <Col>
+                <Dice name="Current Exhaustion" value={this.state.exhaustion} max={6} />
+              </Col>
+              <Col>
+                <Dice name="Responses Fight?" value={this.state.fight} />
+              </Col>
+              <Col>
+                <Dice name="or Flight?" value={this.state.flight} />
+              </Col>
+            </Row>
+          </Container>
 
-        <Row>
-          <Dice name="Discipline" value={this.state.discipline} />
-          <Dice name="Permanent Madness" value={this.state.madness} />
-          <Dice name="Current Exhaustion" value={this.state.exhaustion} max={6} />
-        </Row>
+        </Card.Body>
+        <Card.Footer className="text-muted">
+          <div
+            className="hider"
+            onClick={() => this.toggleDetails()}
+          >
+            <div className="border" />
+            <p className="content">⇊</p>
+            <div className="border" />
+          </div>
 
-        <Row>
-          <Dice name="Responses Fight?" value={this.state.fight} />
-          <Dice name="or Flight?" value={this.state.flight} />
-        </Row>
-
-        <Row>
-          <Col>
-            <div
-              className="hider"
-              onClick={() => this.toggleDetails()}
-            >
-              <div className="border" />
-              <p className="content">⇊</p>
-              <div className="border" />
+          <Collapse in={this.state.showDetail}>
+            <div id="questions-sheet">
+              <Question>What’s been keeping you awake?</Question>
+              <Question>What just happened to you?</Question>
+              <Question>What’s on the surface?</Question>
+              <Question>What lies beneath?</Question>
+              <Question>What’s your path?</Question>
             </div>
+          </Collapse>
 
-            <Collapse in={this.state.showDetail}>
-              <div id="questions-sheet">
-                <Question>What’s been keeping you awake?</Question>
-                <Question>What just happened to you?</Question>
-                <Question>What’s on the surface?</Question>
-                <Question>What lies beneath?</Question>
-                <Question>What’s your path?</Question>
-              </div>
-            </Collapse>
-          </Col>
-        </Row>
-      </Container>
+        </Card.Footer>
+      </Card>
+
+
+
     );
   }
 }

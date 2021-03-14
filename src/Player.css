@@ -1,3 +1,7 @@
+.mainBox {
+  margin-bottom: 12px;
+  padding: 0;
+}
 
 .hider {
   display: flex;

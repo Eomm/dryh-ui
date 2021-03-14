@@ -24,20 +24,17 @@ class MadCity extends React.PureComponent {
 
   addPlayer() {
     const players = this.state.players.slice();
-    players.push(<Player onChange={() => this.playerUpdate()} />);
+    players.push(<Player onChange={(evt) => this.playerUpdate('Player ' + players.length, evt)} />);
     this.setState({ players });
   }
 
 
-  rollDices() {
+  playerUpdate(player, message) {
     const gameEvents = this.state.gameEvents.slice();
-    gameEvents.push('Demo ' + Date.now());
+    gameEvents.push(`${message.player || player}: ${message.text}`);
     this.setState({ gameEvents });
   }
 
-  playerUpdate() {
-    console.log('the player has been updated');
-  }
 
   render() {
     return (
@@ -45,6 +42,7 @@ class MadCity extends React.PureComponent {
         <Jumbotron fluid>
           <Container>
             <h3>Don&apos;t rest your head</h3>
+            <p>This is a dashboard to ease the <a href="https://en.wikipedia.org/wiki/Don%27t_Rest_Your_Head">role-playing game sessions</a></p>
             <Row>
               <Col>
                 <Button variant="primary"
@@ -60,14 +58,6 @@ class MadCity extends React.PureComponent {
                     return (<option key={i}>{player.name || `Player ${i + 1}`}</option>)
                   })}
                 </Form.Control>
-              </Col>
-              <Col>
-                <Button variant="success"
-                  disabled={this.state.players.length === 0}
-                  onClick={() => this.rollDices()}
-                >
-                  Roll Dices
-                </Button>
               </Col>
             </Row>
             <Row>

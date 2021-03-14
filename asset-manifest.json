@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dryh-ui/static/css/main.8c34f28f.chunk.css",
-    "main.js": "/dryh-ui/static/js/main.92a6930d.chunk.js",
-    "main.js.map": "/dryh-ui/static/js/main.92a6930d.chunk.js.map",
+    "main.css": "/dryh-ui/static/css/main.541bde33.chunk.css",
+    "main.js": "/dryh-ui/static/js/main.e3267289.chunk.js",
+    "main.js.map": "/dryh-ui/static/js/main.e3267289.chunk.js.map",
     "runtime-main.js": "/dryh-ui/static/js/runtime-main.3f42a01b.js",
     "runtime-main.js.map": "/dryh-ui/static/js/runtime-main.3f42a01b.js.map",
-    "static/js/2.3db4ce40.chunk.js": "/dryh-ui/static/js/2.3db4ce40.chunk.js",
-    "static/js/2.3db4ce40.chunk.js.map": "/dryh-ui/static/js/2.3db4ce40.chunk.js.map",
+    "static/js/2.d7215f20.chunk.js": "/dryh-ui/static/js/2.d7215f20.chunk.js",
+    "static/js/2.d7215f20.chunk.js.map": "/dryh-ui/static/js/2.d7215f20.chunk.js.map",
     "index.html": "/dryh-ui/index.html",
-    "static/css/main.8c34f28f.chunk.css.map": "/dryh-ui/static/css/main.8c34f28f.chunk.css.map",
-    "static/js/2.3db4ce40.chunk.js.LICENSE.txt": "/dryh-ui/static/js/2.3db4ce40.chunk.js.LICENSE.txt"
+    "static/css/main.541bde33.chunk.css.map": "/dryh-ui/static/css/main.541bde33.chunk.css.map",
+    "static/js/2.d7215f20.chunk.js.LICENSE.txt": "/dryh-ui/static/js/2.d7215f20.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3f42a01b.js",
-    "static/js/2.3db4ce40.chunk.js",
-    "static/css/main.8c34f28f.chunk.css",
-    "static/js/main.92a6930d.chunk.js"
+    "static/js/2.d7215f20.chunk.js",
+    "static/css/main.541bde33.chunk.css",
+    "static/js/main.e3267289.chunk.js"
   ]
 }
